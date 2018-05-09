@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <%= stylesheet_link_tag    "shop", :media=> "all" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body class='<%= controller.controller_name %>'>
+	<!--END_HIGHLIGHT -->
+
+<%= yield %>
+
+</body>
+</html>

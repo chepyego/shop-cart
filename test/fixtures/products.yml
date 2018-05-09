@@ -1,13 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-   title: MyString
+  title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
 
 two:
-   title: MyString
+  title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
+
+ruby:
+  title:   TCL TV
+  description:
+    American brand,comes with one year warranty,Smart Tv and digital TV
+  price:  21500
+  image_url: sony.jpeg

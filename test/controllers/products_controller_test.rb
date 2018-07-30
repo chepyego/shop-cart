@@ -22,14 +22,14 @@ class ProductsControllerTest < ActionController::TestCase
     assert_response :success
   end
   test "can't delete product in cart" do
-    assert_difference('product.count',0) do
+    assert_difference('products.count',0) do
       delete product_url(products(:two))
     end
     assert_redirects_to products_url
   end
 
   test "should create product" do
-    assert_difference('Product.count') do
+    assert_difference('Products.count') do
       post :create, product: {  title:@product. title, description:@product.description, image_url: @product.image_url, price:@product.price }
     end
 
@@ -48,11 +48,11 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should update product" do
     patch :update, id: @product, product: {  title: @product. title, description: @product.description, image_url: @product.image_url, price: @product.price }
-    assert_redirected_to product_path(assigns(:product))
+    assert_redirected_to product_path(products),(assigns(:product))
   end
 
   test "should destroy product" do
-    assert_difference('Product.count', -1) do
+    assert_difference 'Product.count', -1 do
       delete product_url (@product)
     end
 
